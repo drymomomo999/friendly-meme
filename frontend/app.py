@@ -8,7 +8,6 @@ import streamlit as st
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:3001")
 
 st.set_page_config(page_title="Hertell", layout="wide")
-st.set_option("browser.gatherUsageStats", False)
 
 TRANSLATIONS = {
     "zh": {
