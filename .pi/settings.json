@@ -1,0 +1,13 @@
+{
+  "defaultProvider": "kimi-direct",
+  "defaultModel": "kimi-for-coding",
+  "defaultThinkingLevel": "medium",
+  "theme": "dark",
+  "skills": [
+    "/home/codespace/.pi/agent/skills"
+  ],
+  "compaction": {
+    "enabled": true,
+    "thresholdTokens": 80000
+  }
+}

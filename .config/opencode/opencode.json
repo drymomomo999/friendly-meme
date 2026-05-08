@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "kimi-direct/kimi-for-coding",
+  "autoupdate": false,
+  "provider": {
+    "kimi-direct": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "Kimi For Coding",
+      "options": {
+        "baseURL": "https://api.kimi.com/coding/v1",
+        "apiKey": "{env:KIMI_API_KEY}"
+      },
+      "models": {
+        "kimi-for-coding": {
+          "name": "kimi-for-coding",
+          "limit": { "context": 262144, "output": 32768 },
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        }
+      }
+    },
+    "volcengine-coding-plan": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Volcano Engine",
+      "options": {
+        "baseURL": "https://ark.cn-beijing.volces.com/api/coding/v3",
+        "apiKey": "{env:ARK_API_KEY}"
+      },
+      "models": {
+        "ark-code-latest":      { "name": "ark-code-latest",      "limit": { "context": 256000, "output": 4096 } },
+        "kimi-k2.6":            { "name": "kimi-k2.6",            "limit": { "context": 256000, "output": 4096 }, "modalities": { "input": ["text", "image"], "output": ["text"] } },
+        "kimi-k2.5":            { "name": "kimi-k2.5",            "limit": { "context": 256000, "output": 4096 } },
+        "doubao-seed-2.0-code": { "name": "doubao-seed-2.0-code", "limit": { "context": 256000, "output": 4096 }, "modalities": { "input": ["text", "image"], "output": ["text"] } },
+        "doubao-seed-code":     { "name": "doubao-seed-code",     "limit": { "context": 256000, "output": 4096 }, "modalities": { "input": ["text", "image"], "output": ["text"] } },
+        "deepseek-v3.2":        { "name": "deepseek-v3.2",        "limit": { "context": 128000, "output": 4096 } },
+        "glm-5.1":              { "name": "glm-5.1",              "limit": { "context": 200000, "output": 4096 } },
+        "minimax-latest":       { "name": "minimax-latest",       "limit": { "context": 200000, "output": 4096 } }
+      }
+    }
+  }
+}
